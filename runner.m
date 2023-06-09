@@ -20,8 +20,8 @@ delt=0.025;
 I_K=delt;
 
 %% default prob
-PD_ss=0.0055;
-S_ss=fsolve(@(S) S/(1+S)-PD_ss,1);
+PD_ss=0.005;
+S_ss=fsolve(@(S_ss) S_ss/(S_ss+1)-PD_ss,1);
 fprintf('PD: %0.4f \n',PD_ss);
 fprintf('S: %0.4f \n',S_ss);
 

@@ -90,7 +90,7 @@ set_param_value('d_ss',d_ss);
 model;
 1/(C-gamm*C(-1))-lambd-bet*gamm/(C(+1)-gamm*C)=0;
 lambd*w=zet/(1-H);
-bet*lambd(+1)-lambd/R=0;
+bet*lambd(+1)/pi(+1)-lambd/R=0;
 Omeg=lambd(+1)/lambd*(1-ps+ps*A(+1)); %%
 Omeg*(RK(+1)-R)=mul*lambd_K; %%
 Omeg*(RB-R)=mul*lambd_B; %%
@@ -165,12 +165,13 @@ steady;
 check;
 
 shocks;
-var eps_z=0.01;
+%var eps_z=0.01;
 var eps_S=0.01;
-var eps_i=0.01;
+%var eps_i=0.01;
+%var eps_G=0.01;
 end;
 
-stoch_simul(order=1,irf=20,periods=0);
+stoch_simul(order=1,irf=40,periods=0);
 
 
 
