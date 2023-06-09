@@ -37,7 +37,7 @@ RK_ss=R_ss+SK_ss;
 RB_ss=R_ss+SB_ss;
 fprintf('RK: %0.4f \n',RK_ss);
 fprintf('RB: %0.4f \n',RB_ss);
-QB_ss=1;      % calibrate iota in 各種資産
+QB_ss=1;      % calibrate iota in 政府債
 
 %% 実物経済
 alph=0.35;
